@@ -2,7 +2,7 @@
 
 ## Optimal initialization
 
-- 2004 - [Synthesis of Quantum Logic Circuits](https://arxiv.org/abs/quant-ph/0406176). The paper I started with. It introduces the `Multiplexor` operator - unitary block-diagonal matrix. The extreme case of such matrix is an arbitrary diagonal matrix $\Delta$. Preparation of such matrix is a recursive divide-n-conquer process: we can prepare a diagonal matrix from block-diagonal with $2\times2$ blocks, etc. Knowing this algorithm we can ititialize arbitrary $|\psi\rangle$: prepare equal superposition with Hadamard gates, and then apply $\Delta$. Like this: $|\psi\rangle=\Delta\times\frac{1}{\sqrt{2^N}}\mathbf{1}=\Delta\times H^{\otimes N}\times|0\rangle=diag(\psi)\times H^{\otimes N}\times|0\rangle$. This method is implemented in [Qiskit's initialize()](https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.initialize.html). This paper also adds and important idea, that operators $CNOT(a, b)$ and $CNOT(c, b)$ commute, thus we can swap their places; and 2 conseqent equal $CNOT$'s cancel out. For the proposed algorithm this helps to reduce number of $CNOT$'s: $CNOT(a, b)-CNOT(c, b)-CNOT(a, b)$ gate sequence (which appears when a state vector has 2 equal consequent values) is equivalent to just $CNOT(c, b)$.
+- 2004 - [Synthesis of Quantum Logic Circuits](https://arxiv.org/abs/quant-ph/0406176). The paper I started with. It introduces the `Multiplexor` operator -- unitary block-diagonal matrix. The extreme case of such matrix is an arbitrary diagonal matrix $\Delta$. Preparation of such matrix is a recursive divide-n-conquer process: we can prepare a diagonal matrix from block-diagonal with $2\times2$ blocks, etc. Knowing this algorithm we can ititialize arbitrary $|\psi\rangle$: prepare equal superposition with Hadamard gates, and then apply $\Delta$. Like this: $|\psi\rangle=\Delta\times\frac{1}{\sqrt{2^N}}\mathbf{1}=\Delta\times H^{\otimes N}\times|0\rangle=diag(\psi)\times H^{\otimes N}\times|0\rangle$. This method is implemented in [Qiskit's initialize()](https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.initialize.html). This paper also adds and important idea, that operators $CNOT(a, b)$ and $CNOT(c, b)$ commute, thus we can swap their places; and 2 conseqent equal $CNOT$'s cancel out. For the proposed algorithm this helps to reduce number of $CNOT$'s: $CNOT(a, b)-CNOT(c, b)-CNOT(a, b)$ gate sequence (which appears when a state vector has 2 equal consequent values) is equivalent to just $CNOT(c, b)$.
 ```
 @article{shende2006synthesis,
   title={Synthesis of quantum-logic circuits},
@@ -60,7 +60,6 @@
 }
 ```
 - https://zxcalculus.com/
--  
 
 
 ## Decomposition
@@ -79,3 +78,6 @@ year = {2010},
 doi = {10.1137/090764189},
 URL = {https://doi.org/10.1137/090764189}
 }
+```
+- Proposed authors: *Ivan Oseledets, Alexander Novikov, Roman Schutski, Maxim, Rahuba, Valentin Khrulkov.*
+- [Python reference](https://stackoverflow.com/questions/66753122/specific-tensor-decomposition)
