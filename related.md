@@ -4,23 +4,6 @@
 <details>
 <summary>papers proposed by Skoltech (to sort)</summary>
 
-- 2009 - [Typicality in random matrix product states](https://arxiv.org/abs/0908.3877)
- ```
- @article{PhysRevA.81.032336,
-  title = {Typicality in random matrix product states},
-  author = {Garnerone, Silvano and de Oliveira, Thiago R. and Zanardi, Paolo},
-  journal = {Phys. Rev. A},
-  volume = {81},
-  issue = {3},
-  pages = {032336},
-  numpages = {8},
-  year = {2010},
-  month = {Mar},
-  publisher = {American Physical Society},
-  doi = {10.1103/PhysRevA.81.032336},
-  url = {https://link.aps.org/doi/10.1103/PhysRevA.81.032336}
-}
-```
 - 2010 - [Statistical properties of random matrix product states](https://arxiv.org/abs/1003.5253)
 ```
 @article{PhysRevA.82.052312,
@@ -147,6 +130,25 @@
 
 ## On Decomposition
 The idea is to start thinking about vector, matrix, and tensor decomposition techniques. The extereme goal is to obtain for a desired state $|\Psi\rangle$: $\bigotimes_{i=0}^{N}|\psi_i\rangle\approx|\Psi\rangle$. Approximation can be done with respect to **some criterion**, which meets the problem, e.g. cosine similarity, smallest number or affected amplitudes, etc. Today Tensor Decompositions propose a numerous methods, which we can study accoss the problem of gate minimization and noise introduction.
+
+- 2009 - [Typicality in random matrix product states](https://arxiv.org/abs/0908.3877).
+This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wiki/Matrix_product_state) (which is how physics call TT, this shows that all **legal quantum states** can be prepated with a *sequence of unitary transformations packed in tensors*), and **typicality**. Typicality is the thing which is a physical implementation on [concentration of measure phenomenon](https://en.wikipedia.org/wiki/Concentration_of_measure). What they show - there is typicality observed with even linear growth of a single particle space dimensionality ($\chi$. In other words, there is an interesting structure found in valid quantum states which can have and observation in statistical physics. What I learned from here (maybe wrong). If there is independency, tensor matrices of one "site" (i.e. corresponding to 1 qubit) will be equal. (See page 1 phrase: *For homogeneous MPS the set $\{A^1[s],A^2[s], ... , A^D[s]\}$ is the same for all sites $s$*).
+```
+@article{PhysRevA.81.032336,
+ title = {Typicality in random matrix product states},
+ author = {Garnerone, Silvano and de Oliveira, Thiago R. and Zanardi, Paolo},
+ journal = {Phys. Rev. A},
+ volume = {81},
+ issue = {3},
+ pages = {032336},
+ numpages = {8},
+ year = {2010},
+ month = {Mar},
+ publisher = {American Physical Society},
+ doi = {10.1103/PhysRevA.81.032336},
+ url = {https://link.aps.org/doi/10.1103/PhysRevA.81.032336}
+}
+```
 
 - 2010 - [Hierarchical Singular Value Decomposition of Tensors](https://epubs.siam.org/doi/abs/10.1137/090764189). 
 ```
