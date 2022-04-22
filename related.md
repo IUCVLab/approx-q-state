@@ -4,25 +4,10 @@
 <details>
 <summary>papers proposed by Skoltech (to sort)</summary>
 
-- 2010 - [Statistical properties of random matrix product states](https://arxiv.org/abs/1003.5253)
-```
-@article{PhysRevA.82.052312,
-  title = {Statistical properties of random matrix product states},
-  author = {Garnerone, Silvano and de Oliveira, Thiago R. and Haas, Stephan and Zanardi, Paolo},
-  journal = {Phys. Rev. A},
-  volume = {82},
-  issue = {5},
-  pages = {052312},
-  numpages = {11},
-  year = {2010},
-  month = {Nov},
-  publisher = {American Physical Society},
-  doi = {10.1103/PhysRevA.82.052312},
-  url = {https://link.aps.org/doi/10.1103/PhysRevA.82.052312}
-}
-```
-
 - 2012 - [Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy](https://arxiv.org/abs/1201.6324)
+<details>
+<summary>bibtex</summary>
+
 ```
 @article{2013, 
   title={Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy}, 
@@ -36,7 +21,12 @@
   author={Collins, Benoît and González-Guillén, Carlos E. and Pérez-García, David}, year={2013}, month={May}, 
   pages={663–677} }
 ```
+</details>
+
 - 2020 - [Randomized algorithms for fast computation of low rank tensor ring model](https://iopscience.iop.org/article/10.1088/2632-2153/abad87/meta)
+<details>
+<summary>bibtex</summary>
+
 ```
 @article{Ahmadi_Asl_2020,
 	doi = {10.1088/2632-2153/abad87},
@@ -52,10 +42,9 @@
 	journal = {Machine Learning: Science and Technology}
 }
 ```
-
+</details>
 
 - 2022 - [How to Train Unstable Looped Tensor Network](https://arxiv.org/abs/2203.02617)
-
 
 </details>
 
@@ -63,6 +52,9 @@
 ## Optimal initialization
 
 - 2004 - [Synthesis of Quantum Logic Circuits](https://arxiv.org/abs/quant-ph/0406176). The paper I started with. It introduces the `Multiplexor` operator -- unitary block-diagonal matrix. The extreme case of such matrix is an arbitrary diagonal matrix $\Delta$. Preparation of such matrix is a recursive divide-n-conquer process: we can prepare a diagonal matrix from block-diagonal with $2\times2$ blocks, etc. Knowing this algorithm we can ititialize arbitrary $|\psi\rangle$: prepare equal superposition with Hadamard gates, and then apply $\Delta$. Like this: $|\psi\rangle=\Delta\times\frac{1}{\sqrt{2^N}}\mathbf{1}=\Delta\times H^{\otimes N}\times|0\rangle=diag(\psi)\times H^{\otimes N}\times|0\rangle$. This method is implemented in [Qiskit's initialize()](https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.initialize.html). This paper also adds and important idea, that operators $CNOT(a, b)$ and $CNOT(c, b)$ commute, thus we can swap their places; and 2 conseqent equal $CNOT$'s cancel out. For the proposed algorithm this helps to reduce number of $CNOT$'s: $CNOT(a, b)-CNOT(c, b)-CNOT(a, b)$ gate sequence (which appears when a state vector has 2 equal consequent values) is equivalent to just $CNOT(c, b)$.
+<details>
+<summary>bibtex</summary>
+
 ```
 @article{shende2006synthesis,
   title={Synthesis of quantum-logic circuits},
@@ -75,6 +67,7 @@
   publisher={IEEE}
 }
 ```
+</details>
 
 <details><summary>Not read yet</summary>
 
@@ -133,6 +126,8 @@ The idea is to start thinking about vector, matrix, and tensor decomposition tec
 
 - 2009 - [Typicality in random matrix product states](https://arxiv.org/abs/0908.3877).
 This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wiki/Matrix_product_state) (which is how physics call TT, this shows that all **legal quantum states** can be prepated with a *sequence of unitary transformations packed in tensors*), and **typicality**. Typicality is the thing which is a physical implementation on [concentration of measure phenomenon](https://en.wikipedia.org/wiki/Concentration_of_measure). What they show - there is typicality observed with even linear growth of a single particle space dimensionality ($\chi$. In other words, there is an interesting structure found in valid quantum states which can have and observation in statistical physics. What I learned from here (maybe wrong). If there is independency, tensor matrices of one "site" (i.e. corresponding to 1 qubit) will be equal. (See page 1 phrase: *For homogeneous MPS the set $\{A^1[s],A^2[s], ... , A^D[s]\}$ is the same for all sites $s$*).
+<details>
+<summary>bibtex</summary>
 ```
 @article{PhysRevA.81.032336,
  title = {Typicality in random matrix product states},
@@ -149,8 +144,36 @@ This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wi
  url = {https://link.aps.org/doi/10.1103/PhysRevA.81.032336}
 }
 ```
+</details>
+
+- 2010 - [Statistical properties of random matrix product states](https://arxiv.org/abs/1003.5253). Another paper of the same team which studied better numerical properties of the same object: randomily generated matrices to restore a big unitary. Again typicality (concentration-of-measure) meets MPS for modelling complex objects of statistical physics. Additional observations: I already faced concentration-of-measure in my NSW experiments, where higher dimension vectors crouded around class boundary. In simple words CoM is when a multidimensional function tend to be almost constant in value if parameter changes. E.g. random point pair distance on a multidimensional sphere is almost always $\frac{\pi}{2}$.
+<details>
+<summary>bibtex</summary>
+
+```
+@article{PhysRevA.82.052312,
+  title = {Statistical properties of random matrix product states},
+  author = {Garnerone, Silvano and de Oliveira, Thiago R. and Haas, Stephan and Zanardi, Paolo},
+  journal = {Phys. Rev. A},
+  volume = {82},
+  issue = {5},
+  pages = {052312},
+  numpages = {11},
+  year = {2010},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.82.052312},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.82.052312}
+}
+```
+
+</details>
+
 
 - 2010 - [Hierarchical Singular Value Decomposition of Tensors](https://epubs.siam.org/doi/abs/10.1137/090764189). 
+<details>
+<summary>bibtex</summary>
+
 ```
 @article{doi:10.1137/090764189,
 author = {Grasedyck, Lars},
@@ -164,6 +187,7 @@ doi = {10.1137/090764189},
 URL = {https://doi.org/10.1137/090764189}
 }
 ```
+</details>
 
 - Proposed authors: *Ivan Oseledets, Alexander Novikov, Roman Schutski, Maxim, Rahuba, Valentin Khrulkov.*
 - [Python reference](https://stackoverflow.com/questions/66753122/specific-tensor-decomposition)
