@@ -4,25 +4,6 @@
 <details>
 <summary>papers proposed by Skoltech (to sort)</summary>
 
-- 2012 - [Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy](https://arxiv.org/abs/1201.6324)
-<details>
-<summary>bibtex</summary>
-
-```
-@article{2013, 
-  title={Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy}, 
-  volume={320}, 
-  ISSN={1432-0916}, 
-  url={http://dx.doi.org/10.1007/s00220-013-1718-x}, 
-  DOI={10.1007/s00220-013-1718-x}, 
-  number={3}, 
-  journal={Communications in Mathematical Physics}, 
-  publisher={Springer Science and Business Media LLC},  
-  author={Collins, Benoît and González-Guillén, Carlos E. and Pérez-García, David}, year={2013}, month={May}, 
-  pages={663–677} }
-```
-</details>
-
 - 2020 - [Randomized algorithms for fast computation of low rank tensor ring model](https://iopscience.iop.org/article/10.1088/2632-2153/abad87/meta)
 <details>
 <summary>bibtex</summary>
@@ -128,6 +109,7 @@ The idea is to start thinking about vector, matrix, and tensor decomposition tec
 This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wiki/Matrix_product_state) (which is how physics call TT, this shows that all **legal quantum states** can be prepated with a *sequence of unitary transformations packed in tensors*), and **typicality**. Typicality is the thing which is a physical implementation on [concentration of measure phenomenon](https://en.wikipedia.org/wiki/Concentration_of_measure). What they show - there is typicality observed with even linear growth of a single particle space dimensionality ($\chi$. In other words, there is an interesting structure found in valid quantum states which can have and observation in statistical physics. What I learned from here (maybe wrong). If there is independency, tensor matrices of one "site" (i.e. corresponding to 1 qubit) will be equal. (See page 1 phrase: *For homogeneous MPS the set $\{A^1[s],A^2[s], ... , A^D[s]\}$ is the same for all sites $s$*).
 <details>
 <summary>bibtex</summary>
+
 ```
 @article{PhysRevA.81.032336,
  title = {Typicality in random matrix product states},
@@ -167,6 +149,25 @@ This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wi
 }
 ```
 
+</details>
+
+- 2012 - [Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy](https://arxiv.org/abs/1201.6324). The work is kind of another general view on "can we use MPS for more efficient simulations". Here they explore maximum Entropy principle, which states that in nature the most probable dustributions are those which maximize entropy (in this paper von Neuman's entropy). Major theorem of the paper proves that if $D\geq N^5$ then whatever we generate with RMPS is almost indistiguishable from straighforward behavior (max entropy is equal observation of states denoted as $\mathbf{1}/d^l$). Also from this paper I learned (figure 1) what is spin chain. And local interations are important, as they are enough (which we observe when implement very distant CNOT). And in the end, again, emphasis is on "with MPS we generate maximum entropy, thus this is natural".
+<details>
+<summary>bibtex</summary>
+
+```
+@article{2013, 
+  title={Matrix Product States, Random Matrix Theory and the Principle of Maximum Entropy}, 
+  volume={320}, 
+  ISSN={1432-0916}, 
+  url={http://dx.doi.org/10.1007/s00220-013-1718-x}, 
+  DOI={10.1007/s00220-013-1718-x}, 
+  number={3}, 
+  journal={Communications in Mathematical Physics}, 
+  publisher={Springer Science and Business Media LLC},  
+  author={Collins, Benoît and González-Guillén, Carlos E. and Pérez-García, David}, year={2013}, month={May}, 
+  pages={663–677} }
+```
 </details>
 
 
