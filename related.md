@@ -27,6 +27,20 @@
 
 - 2022 - [How to Train Unstable Looped Tensor Network](https://arxiv.org/abs/2203.02617)
 
+- 2022 - [TTOpt: A Maximum Volume Quantized Tensor Train-based Optimization and its Application to Reinforcement Learning](https://arxiv.org/abs/2205.00293)
+<details>
+<summary>bibtex</summary>
+
+```
+@misc{TTOps,
+  doi = {10.48550/ARXIV.2205.00293},
+  url = {https://arxiv.org/abs/2205.00293},
+  author = {Sozykin, Konstantin and Chertkov, Andrei and Schutski, Roman and Phan, Anh-Huy and Cichocki, Andrzej and Oseledets, Ivan},
+  keywords = {Machine Learning (cs.LG), Neural and Evolutionary Computing (cs.NE), Optimization and Control (math.OC), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Mathematics, FOS: Mathematics},
+```
+</details>
+
+
 </details>
 
 
@@ -186,6 +200,24 @@ pages = {2029-2054},
 year = {2010},
 doi = {10.1137/090764189},
 URL = {https://doi.org/10.1137/090764189}
+}
+```
+</details>
+
+- [Alternating Least Squares Tensor Completion in The TT-Format](https://arxiv.org/abs/1509.00311).
+<details>
+<summary>bibtex</summary>
+
+```
+@misc{ALSTT,
+  doi = {10.48550/ARXIV.1509.00311},
+  url = {https://arxiv.org/abs/1509.00311},
+  author = {Grasedyck, Lars and Kluge, Melanie and Krämer, Sebastian},
+  keywords = {Numerical Analysis (math.NA), FOS: Mathematics, FOS: Mathematics, 15A69, 65F99},
+  title = {Alternating Least Squares Tensor Completion in The TT-Format},
+  publisher = {arXiv},
+  year = {2015}, 
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
 </details>
