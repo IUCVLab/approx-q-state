@@ -222,6 +222,8 @@ URL = {https://doi.org/10.1137/090764189}
 ```
 </details>
 
+- 2021 - On **Entanglement Forging**. [Video explainer](https://www.youtube.com/watch?v=vJZRUf1abQs), [Paper](https://arxiv.org/abs/2104.10220), [Press release](https://research.ibm.com/blog/quantum-entanglement-forging), [CODE](https://github.com/qiskit-community/prototype-entanglement-forging).
+
 - Proposed authors: *Ivan Oseledets, Alexander Novikov, Roman Schutski, Maxim, Rahuba, Valentin Khrulkov.*
 - [Python reference](https://stackoverflow.com/questions/66753122/specific-tensor-decomposition)
 - [TT implementation](https://github.com/oseledets/ttpy)
