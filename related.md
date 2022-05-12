@@ -226,7 +226,13 @@ This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wi
 ### Entanglement forging
 
 - 2021 - On **Entanglement Forging**. [Video explainer](https://www.youtube.com/watch?v=vJZRUf1abQs), [Paper](https://arxiv.org/abs/2104.10220), [Press release](https://research.ibm.com/blog/quantum-entanglement-forging), [CODE](https://github.com/qiskit-community/prototype-entanglement-forging).
-  
+  <img src="https://dwzke5c1hcizv.cloudfront.net/image?url=https%3A%2F%2Fresearch-website-prod-cms-uploads.s3.us.cloud-object-storage.appdomain.cloud%2Ffig1_2_N_qubit_circuit_9b7a33a9c4.png&w=1920&q=75">
+  Citation: "You can also apply entanglement forging to systems **that aren’t weakly entangled**. We just have to do more computation on the classical computer either to determine how best to partition the system, or **to represent the correlation** between the two halves".
+  My note: with this explanation, the stronger is the entanglement, the longer will be the sequence with $\lambda_i$. Thus we save qubits, but may potentially increase the depth. Which is OPPOSITE to my idea - keeping the number or qubits and reducing the depth. Proof: *"Moreover, there can be a large overhead cost in the number of these measurements that must be taken"*.
+
+  <u>Trade-off</u>: If researchers **don’t know the best places to cut** ahead of time, they’ll likely need to use classical computational methods to **evaluate various cuts** for the expected cost of reassembly, as well as computational resources that can perform reassembly in the cases where it isn’t cheap.
+
+
 ### Other
 
 - Proposed authors: *Ivan Oseledets, Alexander Novikov, Roman Schutski, Maxim, Rahuba, Valentin Khrulkov.*
