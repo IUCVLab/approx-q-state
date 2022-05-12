@@ -225,3 +225,82 @@ URL = {https://doi.org/10.1137/090764189}
 - Proposed authors: *Ivan Oseledets, Alexander Novikov, Roman Schutski, Maxim, Rahuba, Valentin Khrulkov.*
 - [Python reference](https://stackoverflow.com/questions/66753122/specific-tensor-decomposition)
 - [TT implementation](https://github.com/oseledets/ttpy)
+
+## Measurement error mitigation
+- 2022 - [Medium post: How To Tackle IBM's Quantum Open Science Prize](https://pyqml.medium.com/how-to-tackle-ibms-quantum-open-science-prize-e6c7fc594154). Targeting the problem of measurement in a 7-qubit Jakarta system. Says "Let us try Error mitigation with Clifford quantum-circuit data", but nothing else. But stores interesting links below.
+
+- 2022 - [Towardsdatascience post: Quantum Measurement Mitigation With Qiskit](https://towardsdatascience.com/quantum-measurement-mitigation-with-qiskit-bb35b3d28eec). Explaining error mitigation in practice. Step 1 - find a ratio of ideal and noise-free values (if count is 30 in noise-free and 105 in noise - 30/105). That us how we find "modifiers" for each measurement outcome. We use the same modifier for next circuit runs. (My note - this is similar technique explained in IonQ recommendations: remove impossible outcomes, but also it rescales other outputs). As the methods is used with *quantum tomography* - i.e. looking at the Bloch sphere from different angles (X, Y, Z angles, or XX, XY ... for 2qubit, ... - $3^n$ in general), we will generate tomography circuits first. And then restore the state based on their measurements. Indeed this is just changes of measurement basis:
+
+```
+from qiskit.ignis.verification.tomography import state_tomography_circuits 
+... 
+circuits = state_tomography_circuits(qc, [1,3,5]) # 27
+... 
+state = StateTomographyFitter(results, circuits).fit(method='lstsq') # best point to fit 27 projections
+```
+Modifiers are then computed per tomography circuit. Interesting tool: `from qiskit.opflow import Zero, One`.
+
+- 2016 - [Error mitigation for short-depth quantum circuits](https://arxiv.org/abs/1612.02058)
+<details>
+<summary>bibtex</summary>
+
+```
+@article{PhysRevLett.119.180509,
+  title = {Error Mitigation for Short-Depth Quantum Circuits},
+  author = {Temme, Kristan and Bravyi, Sergey and Gambetta, Jay M.},
+  journal = {Phys. Rev. Lett.},
+  volume = {119},
+  issue = {18},
+  pages = {180509},
+  numpages = {5},
+  year = {2017},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.119.180509},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.119.180509}
+}
+```
+</details>
+
+- 2018 - [Low-cost error mitigation by symmetry verification](https://arxiv.org/abs/1807.10050)
+<details>
+<summary>bibtex</summary>
+
+```
+@article{PhysRevA.98.062339,
+  title = {Low-cost error mitigation by symmetry verification},
+  author = {Bonet-Monroig, X. and Sagastizabal, R. and Singh, M. and O'Brien, T. E.},
+  journal = {Phys. Rev. A},
+  volume = {98},
+  issue = {6},
+  pages = {062339},
+  numpages = {10},
+  year = {2018},
+  month = {Dec},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.98.062339},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.98.062339}
+}
+```
+</details>
+
+- 2021 - [Error mitigation with Clifford quantum-circuit data](https://arxiv.org/abs/2005.10189)
+<details>
+<summary>bibtex</summary>
+
+```
+@article{Czarnik2021errormitigation,
+  doi = {10.22331/q-2021-11-26-592},
+  url = {https://doi.org/10.22331/q-2021-11-26-592},
+  title = {Error mitigation with {C}lifford quantum-circuit data},
+  author = {Czarnik, Piotr and Arrasmith, Andrew and Coles, Patrick J. and Cincio, Lukasz},
+  journal = {{Quantum}},
+  issn = {2521-327X},
+  publisher = {{Verein zur F{\"{o}}rderung des Open Access Publizierens in den Quantenwissenschaften}},
+  volume = {5},
+  pages = {592},
+  month = nov,
+  year = {2021}
+}
+```
+</details>
