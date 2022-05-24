@@ -78,6 +78,8 @@
 - 2021 - [Deterministic, scalable, and entanglement efficient initialization of arbitrary quantum states](https://arxiv.org/abs/2110.13454)
 - 2021 - [Configurable sublinear circuits for quantum state preparation](https://arxiv.org/abs/2108.10182)
 - 2021 - [Entanglement as a complexity measure for quantum state preparation](https://arxiv.org/abs/2111.03132)
+- 2022 - [QUEST: systematically approximating Quantum circuits for higher output fidelity](https://dl.acm.org/doi/10.1145/3503222.3507739)
+- 2022 - [Best Approximate Quantum Compiling Problems](https://dl.acm.org/doi/10.1145/3505181)
 </details>
 
 ## Circuit compression
