@@ -235,6 +235,8 @@ This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wi
 
   <u>Trade-off</u>: If researchers **don’t know the best places to cut** ahead of time, they’ll likely need to use classical computational methods to **evaluate various cuts** for the expected cost of reassembly, as well as computational resources that can perform reassembly in the cases where it isn’t cheap.
 
+  **What is the method**. Any entangled system $|\psi\rangle$ can be written down in a form of Schmidt decomposition $|\psi\rangle=\sum _{{i=1}}^{m}\lambda _{i}|a_{i}\rangle\otimes |b_{i}\rangle$. $\lambda$'s are referred as Schmidt coefficients. For the systems which is not entangled at all we have only $\lambda_1$, the others $\lambda_{2+}$ are 0s. For the strongly entangled systems we will observe all $\lambda$'s almost equal. Looking at the picture, one can see, that gates $U$ and $V$ are applied independently to sub-registers, thus the final system can be written as $|\psi\rangle=\sum _{{i=1}}^{m}\lambda _{i}(U|a_{i}\rangle\otimes V|b_{i}\rangle)$ -- Schmidt coefficients are not affected! This we can restore the effect of entanglement by collecting back the sum. Profit? We simulate a halved part of the system intead of the whole, thus we need less qubits. Obviously, weak entanglement is well suited for the method, as you need only a few runs (for a small number of Schmidt coefficients). Note well: Schmidt decomposition can be [done using SVD](https://physics.stackexchange.com/a/251574). Doing Schmidt decompolsition [in python](https://pypi.org/project/pyqentangle/).
+
 
 ### Other
 
