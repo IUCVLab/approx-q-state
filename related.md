@@ -225,6 +225,35 @@ This paper links 2 concepts: [matrix product states](https://en.wikipedia.org/wi
   ```
   </details>
 
+- 2022 - [Approximated quantum-state preparation with entanglement dependent complexity](https://arxiv.org/abs/2111.03132).  The most disappoiniting paper ever. This paper actually implements almost all ideas I just wanted to explore. To be short, they propose to control the fidelity loss by accurately finding the least entangled subsystems and cutting them with SVD. Mathematically this is equivaluent to my proposed excercises with Tucker decomposition. Still, there are some learning outcomes (and one place for improvement). They use their initialization on [this method (Plesch, 2010)](https://arxiv.org/abs/1003.5760) which is asymptotically exponential, but a little better in constants compared to the one in Qiskit. They address the problem of measuring the entanglement, which include: *"Schmidt rank"* -- the number of non-0 Schmidt coefficients in decomposition. And *"measure of entanglement [(def)](https://arxiv.org/abs/quant-ph/0103155)"* which is basically the $L_2$ distance to the best fully disentangled approximation (product state). Authors take this idea to build a tree, where each branching corresponds to the optimal qubits bi-partitioning with respect to this "measure of entanglement". So, traversing the tree we can obtain the best theoretical approximation **with a controlled loss**, and save some CNOTs. Finally they show, that they do better in practice with these approximation, than with accurate initialization. Weak place here -- exponentially hard problem of optimal qubit bi-partitioning. They tried to address it with greedy method, but the method was not that successful. 
+
+  **Other takeways**: 
+  
+  [This method (page 2)](https://arxiv.org/abs/quant-ph/0307219) uses black magic math to find optimal product state approximation with *nonlinear eigen-problem*. In [this paper](https://www.mdpi.com/1099-4300/17/7/5063/htm) authors use tensor decomposition for approximation, in particular PARAFAC ([Parallel Factor Decomposition](http://mlsp.cs.cmu.edu/courses/fall2013/lectures/Parafac.pdf)) to represent a tensor as a sum of rank-1 tensors, but they limit their observations with 4 qubits and 3 qudits. [This paper (2016)](https://arxiv.org/abs/1609.02076) uses Tucker decomposition with ALS (which I plan to use) to estimate (successfully) the entanglement without solving minimization problem. Other methods listed to be compared are based on trainable circuits -- [AAS](https://arxiv.org/abs/2103.13211) and [qGANs](https://www.nature.com/articles/s41534-019-0223-2). 
+  
+  [Barren plateau](https://www.lanl.gov/discover/news-release-archive/2021/March/0319-barren-plateaus.php) is a flat search space in optimization problems.
+  
+  [Adiabatic theorem](https://en.wikipedia.org/wiki/Adiabatic_theorem) - slow change in Hamiltonian for a system in te eigenstate will result in corresponding evolution to the eigenstate of the final Hamiltonian. This is not the same for fast Hamiltonian change.
+
+  **Method implementation** - [QCLIB library](https://github.com/qclib/qclib).
+
+  <details>
+  <summary>bibtex</summary>
+
+  ```
+  @misc{https://doi.org/10.48550/arxiv.2111.03132,
+  doi = {10.48550/ARXIV.2111.03132},
+  url = {https://arxiv.org/abs/2111.03132},
+  author = {Araujo, Israel F. and Blank, Carsten and da Silva, Adenilton J.},
+  keywords = {Quantum Physics (quant-ph), Emerging Technologies (cs.ET), FOS: Physical sciences, FOS: Physical sciences, FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Approximated quantum-state preparation with entanglement dependent complexity},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+  }
+  ```
+  </details>
+
 
 ### Entanglement forging
 
