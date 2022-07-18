@@ -11,4 +11,4 @@ In [related works](related.md) we discuss the works which can help us to underst
 
 Current result includes the study of the Tucker decomposition as the tool to search for low entanglement. I improved the speed of single-qubit entanglement assessment method in terms of speed and memory. Results are:
 - [Published here](https://www.researchgate.net/publication/361993275_Tucker_Tensor_Decomposition_of_a_Quantum_State_for_Entanglement_Analysis?_sg%5B0%5D=z9pmpxvs2KVqj1nNZUfS7wk-2x59nC3ZXPn_pD8vpc8Rk9W2XLvzrmC-rfUXfsbJyurI521bnwbFf8qycvRv5ZmF7WiVRLyFGjAi-s5N.-hvYTVzf5wDenuD9Gh0MGwoxaVwU6A38ARA4qWYBBWkm2BahelblroBr7Ivq6y_Uwyw56n7z5GJZp9pdVwNp4A).
-- [Experimentally assessed here](playground/10 method speed assessment.ipynb).
+- [Experimentally assessed here](playground/10%20method%20speed%20assessment.ipynb).
